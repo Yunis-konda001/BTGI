@@ -51,6 +51,15 @@ body {
 .logo img {
     width: 100px;
     height: auto;
+    margin-left: 5%;
+}
+
+.home-page .image img{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: auto;
+    width: 50%;
+    opacity: 0.9;
 }
 
 /* Styling for Links and Hamburger */
