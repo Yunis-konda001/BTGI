@@ -10,11 +10,10 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: white;
+    background-color: rgba(245, 255, 250, 0.782);
 }
 header {
-    
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 
@@ -57,6 +56,7 @@ body {
     color: white;
     text-align: center;
     z-index: 1; 
+    padding-top: 4%;
 }
 
 .content h1 {
@@ -64,7 +64,7 @@ body {
     margin-bottom: 0.9rem;
     color: rgb(37, 226, 243);
     font-weight: bold;
-    padding-top: 5%;
+    padding-top: 8%;
 }
 
 .content p {
@@ -75,6 +75,7 @@ body {
     line-height: 1.4;
     padding-left: 13%;
     padding-right: 13%;
+    padding-bottom: 4%;
 }
 
 /* Basic styling for the topbar */
@@ -212,53 +213,105 @@ body {
     color: rgb(0, 169, 183);
 }
 
-/*about section*/
-.about-section {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.8; 
-    font-family: Arial, sans-serif; 
-    padding-top: 9%;
-  }
+/* styling about section */
+.about-solution {
+    display: flex;
+    background-color:  #00796b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    gap: 2rem;
+}
 
-  .about-section h1 {
-    font-size: 36px;
-    font-weight: bold; 
-    margin-bottom: 20px; 
-    text-align: center;
-  }
+.image-container {
+    flex: 2;
+    min-width: 300px;
+}
 
-  .about-section blockquote {
-    color: rgb(0, 169, 183);
-    font-size: 18px; 
-    font-style: italic;
-    margin: 20px 0; 
-    text-align: justify;
-  }
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
-  .about-section p {
-    font-size: 18px; 
-    margin: 10px 0; 
-  }
+.text-container {
+    flex: 2;
+    padding: 20px;
+}
+
+.text-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.text-container p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: white;
+
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.learn-more-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-solution {
+        flex-direction: column;
+    }
+    .text-container {
+        padding: 15px;
+    }
+}
 
 /* core values section */
 .core-values {
     text-align: center;
     max-width: 93%;
     margin: 0 auto;
-    padding-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-radius: 10px;
+    background-image: url('meet1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
 }
 
 .core-values h2 {
     font-family:  'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
-    color: #333;
+    color:white;
     margin-bottom: 20px;
 }
 
 .core-values .highlight {
-    color: rgb(0, 169, 183);
+    color: black;
 }
 
 .values-container {
@@ -270,13 +323,14 @@ body {
 }
 
 .value-item {
-    background-color: white;
+    background-color: #00796b;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.362);
     padding: 20px;
     margin: 10px;
     width: 27%;
     text-align: center;
+    opacity: 0.9;
 }
 .value-item:hover{
     transform: scale(1.04);
@@ -291,7 +345,7 @@ body {
 .value-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: black;
+    color: white;
 }
 
 .value-item p {
@@ -309,10 +363,17 @@ body {
 .pro h2 #highlight{
     color: hsl(195, 100%, 68%);
 }
+
+/* styling programs */
 .programs {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #00796b;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .programs1 {
@@ -323,10 +384,11 @@ body {
 .program-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: left;
     width: 90%; 
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .program-image1 img,
@@ -336,6 +398,8 @@ body {
     height: 300px; 
     object-fit: cover;
     border-radius: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .program-text1,
@@ -346,25 +410,52 @@ body {
 }
 
 h3 {
-    margin-bottom: 10px;
     font-size: 2rem;
-    columns: #000000;
+    color: white;
+    margin-top: 3%;
 }
 
-p {
+.program-text1 {
     margin: 0;
+    flex: 1;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.8;
+}
+.program-text2 {
+    margin: 0;
+    flex: 1;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.8;
+}
+.program-text3 {
+    margin: 0;
+    flex: 1;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.8;
 }
 
 .program-text1 h3 #highlight {
-    color: rgb(0, 169, 183)
+    color: black;
+    font-size: 1.5rem;
 }
 
 .program-text2 h3 #highlight {
-    color: rgb(0, 169, 183)
+    color: black;
+    font-size: 1.5rem;
 }
 
 .program-text3 h3 #highlight {
-    color: rgb(0, 169, 183)
+    color: black;
+    font-size: 1.5rem;
+}
+
+.program-image1 img:hover,
+.program-image2 img:hover,
+.program-image3 img:hover {
+    transform: scale(1.04);
 }
 
 /*the gallery css*/
@@ -420,15 +511,18 @@ p {
 /*the team css*/
 
 .team-section {
-    padding-top: 5%;
-    max-width: 93%;
+    padding-top: 2%;
+    max-width: 90%;
     margin: 0 auto;
+    background-color: #00796b;
+    margin-top: 5%;
+    border-radius: 10px;
 }
 
 .team-section h1 {
     text-align: center;
     font-size: 2.3rem;
-    color: black;
+    color: white;
     margin-bottom: 1rem;
 }
 
@@ -437,16 +531,20 @@ p {
     font-size: 1.2rem;
     color: black;
     margin-bottom: 2rem;
+    line-height: 1.6;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: justify;
 }
 
 .team-section p .highlight {
-    color: rgb(0, 169, 183);
+    color: white;
     font-size: 1.5rem;
     line-height: 1.6;
 }
 
 .team-section .highlight {
-    color: rgb(0, 169, 183);
+    color: black;
 }
 
 .team-container {
@@ -456,7 +554,7 @@ p {
 }
 
 .team-member {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.79);
     padding: 20px;
     width: 30%;
     margin-bottom: 2rem;
@@ -606,7 +704,7 @@ button:hover {
 }
 
 .footer-social a:hover {
-    color: brown; /* Hover effect (light blue) */
+    color: blue; /* Hover effect (light blue) */
 }
 
 /* Footer Bottom */
@@ -675,6 +773,25 @@ button:hover {
     }
     .contact-container{
         width: 70%;
+    }
+
+    .program-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: stretch; /* Make the text take the full width */
+    }
+
+    .program-text1,
+    .program-text2,
+    .program-text3 {
+        width: 100%; /* Make the text take the full width */
+        padding-left: 0; /* Remove left padding to align the text with the image */
+    }
+
+    .program-image1 img,
+    .program-image2 img,
+    .program-image3 img {
+        width: 100%; /* Make the image take the full width */
+        height: auto; /* Adjust height to maintain aspect ratio */
     }
 }
 
